@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <title>Todo List</title>
+  </head>
+  <body style="height: 300px">
+    <div class="non-printable text-center input-group mx-auto mt-3 w-75">
+      <div class="input-group-prepend">
+        <button
+          class=".text-white btn btn-success"
+          type="button"
+          id="add-button"
+        >
+          Add
+        </button>
+      </div>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="To do..."
+        id="input-line"
+      />
+    </div>
+
+    <div
+      class="non-printable text-center input-group mx-auto justify-content-center w-100"
+    >
+      <div class="message-board w-75 mt-3 bg-danger-subtle" id="display-board">
+        <div class="d-flex w-75 mx-auto h-75">
+          <span class="mx-auto my-auto p-5"><h3>The list is Empty</h3></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex mt-3 gap-3 justify-content-center non-printable">
+      <button class="w-25" onclick="arrangeDate()">Arrange by date</button>
+      <button class="w-25" onclick="arrangeStatus(`status`)">
+        Arrange status
+      </button>
+      <button class="w-25" onclick="printPdf()">Print to Pdf</button>
+    </div>
+
+    <ul
+      class="list-group list-group-flush mx-auto w-75 mt-2"
+      id="todo-list"
+    ></ul>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+</html>

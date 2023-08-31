@@ -1,0 +1,9 @@
+.completed {
+  text-decoration: line-through !important;
+}
+
+@media print {
+  .non-printable {
+    display: none;
+  }
+}
